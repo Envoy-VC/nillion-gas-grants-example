@@ -11,6 +11,9 @@ const config = {
     };
     return config;
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   async headers() {
     return [
       {

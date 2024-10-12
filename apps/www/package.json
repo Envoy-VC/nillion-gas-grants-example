@@ -19,7 +19,7 @@
     "@nillion/client-core": "^0.1.0",
     "@nillion/client-payments": "^0.1.0",
     "@nillion/client-react-hooks": "^0.1.0",
-    "@nillion/client-vms": "0.1.0-rc.16",
+    "@nillion/client-vms": "^0.1.0",
     "@nillion/client-wasm": "^0.1.0",
     "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-label": "^2.1.0",
