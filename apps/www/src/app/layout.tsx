@@ -1,11 +1,11 @@
-import { headers } from 'next/headers';
-
-
 import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from 'next';
+import { ThemeProvider } from 'next-themes';
+import { CosmosProvider, NillionProvider } from '~/providers';
 import '~/styles/globals.css';
 
 import { Toaster } from '~/components/ui/sonner';
+import { Navbar } from '~/components';
 
 export const metadata: Metadata = {
   title: 'Create T3 App',
@@ -14,13 +14,18 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
-  
-
   return (
     <html lang='en'>
       <body className={`font-sans ${GeistSans.variable}`}>
-       {children}
-        <Toaster />
+        <ThemeProvider>
+          <CosmosProvider>
+            <NillionProvider>
+              <Navbar />
+              {children}
+              <Toaster />
+            </NillionProvider>
+          </CosmosProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
